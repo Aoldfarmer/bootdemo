@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Service
 public class ScheduledTaskService extends BaseLogger {
@@ -14,12 +15,12 @@ public class ScheduledTaskService extends BaseLogger {
 
     @Scheduled(fixedRate = 5000)
     public void reportCurrentTime() {
-        LOG.debug("每隔5s执行一次：{}" , DATE_FORMAT.format(LocalDateTime.now()));
+        LOG.debug("每隔5s执行一次：{}" , DATE_FORMAT.format(new Date()));
     }
 
-    @Scheduled(cron = "0 44 17 ? * *")
+    @Scheduled(cron = "0 56 20 ? * *")
     public void fixTimeExecution() {
-        LOG.debug("在指定时间：{} 执行", DATE_FORMAT.format(LocalDateTime.now()));
+        LOG.debug("在指定时间：{} 执行", DATE_FORMAT.format(new Date()));
     }
 
 }
