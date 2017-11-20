@@ -28,7 +28,7 @@ public class ElConfig extends BaseLogger {
     @Value("#{ T(java.lang.Math).random() * 100.0}")
     private double randomNumber;
 
-    @Value("#{demoService.another}")
+    @Value("#{demoService111.another}")
     private String fromAnother;
 
     @Value("classpath:test.txt")
