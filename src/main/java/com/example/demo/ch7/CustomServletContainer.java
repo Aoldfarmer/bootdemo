@@ -12,7 +12,7 @@ public class CustomServletContainer implements EmbeddedServletContainerCustomize
 
     @Override
     public void customize(ConfigurableEmbeddedServletContainer container) {
-        container.setPort(8888);
+//        container.setPort(8888);
         container.setSessionTimeout(10, TimeUnit.MINUTES);
     }
 }
